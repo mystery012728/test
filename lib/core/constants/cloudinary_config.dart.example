@@ -1,9 +1,9 @@
 class CloudinaryConfig {
   /// Your Cloudinary Cloud Name
-  static const String cloudName = 'h2symgjf';
+  static const String cloudName = 'YOUR_CLOUD_NAME';
 
   /// Your Cloudinary Unsigned Upload Preset
-  static const String uploadPreset = 'laza_preset';
+  static const String uploadPreset = 'YOUR_UPLOAD_PRESET';
 
   /// Upload API Endpoint
   static String get uploadUrl =>
