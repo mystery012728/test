@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "1058680587089",
-    "project_id": "laza-ecommers",
-    "storage_bucket": "laza-ecommers.firebasestorage.app"
+    "project_number": "000000000000",
+    "project_id": "your-firebase-project-id",
+    "storage_bucket": "your-firebase-project-id.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1058680587089:android:569ac9924a61436cbac970",
+        "mobilesdk_app_id": "1:000000000000:android:0000000000000000000000",
         "android_client_info": {
           "package_name": "com.example.testprojectnew"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB0Vh-x_JMRXBKkW6RgB6EaTrv5MVZ20zc"
+          "current_key": "AIzaSy_YOUR_API_KEY_HERE"
         }
       ],
       "services": {
