@@ -6,6 +6,7 @@ import 'package:image_picker/image_picker.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/routes/app_routes.dart';
 import '../../../core/widgets/custom_button.dart';
+import '../../../core/widgets/custom_back_button.dart';
 import '../../../core/widgets/custom_text_field.dart';
 import '../../../core/widgets/custom_toast_bar.dart';
 import '../bloc/register/register_bloc.dart';
@@ -191,6 +192,7 @@ class _RegisterViewState extends State<RegisterView> {
           appBar: AppBar(
             title: const Text('Sign Up'),
             elevation: 0,
+            leading: const CustomBackButton(),
           ),
           body: SafeArea(
             child: Center(

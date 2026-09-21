@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/widgets/custom_button.dart';
+import '../../../core/widgets/custom_back_button.dart';
 import '../../../core/widgets/custom_text_field.dart';
 import '../../../core/widgets/custom_toast_bar.dart';
 import '../../auth/models/user_model.dart';
@@ -186,11 +187,7 @@ class _EditProfileViewState extends State<EditProfileView> {
           centerTitle: true,
           backgroundColor: AppColors.white,
           elevation: 0,
-          leading: IconButton(
-            icon: const Icon(Icons.arrow_back_ios_new_rounded,
-                color: AppColors.textDark),
-            onPressed: () => Navigator.pop(context),
-          ),
+          leading: const CustomBackButton(),
         ),
         body: SafeArea(
           child: SingleChildScrollView(

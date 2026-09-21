@@ -6,6 +6,7 @@ import '../../../core/constants/app_colors.dart';
 import '../../../core/routes/app_routes.dart';
 import '../../../core/widgets/common_empty_state.dart';
 import '../../../core/widgets/common_error_state.dart';
+import '../../../core/widgets/custom_back_button.dart';
 import '../../../core/widgets/custom_skeleton_loader.dart';
 import '../bloc/cart/cart_bloc.dart';
 import '../models/cart_item_model.dart';
@@ -30,6 +31,9 @@ class _CartViewState extends State<CartView> {
     return Scaffold(
       backgroundColor: AppColors.scaffoldBackground,
       appBar: AppBar(
+        leading: Navigator.canPop(context)
+            ? const CustomBackButton()
+            : null,
         title: Text(
           'Shopping Cart',
           style: TextStyle(

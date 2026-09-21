@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/widgets/custom_button.dart';
+import '../../../core/widgets/custom_back_button.dart';
 import '../../../core/widgets/custom_text_field.dart';
 import '../../../core/widgets/custom_toast_bar.dart';
 import '../bloc/forgot_password/forgot_password_bloc.dart';
@@ -49,6 +50,7 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
         return Scaffold(
           appBar: AppBar(
             title: const Text('Forgot Password'),
+            leading: const CustomBackButton(),
           ),
           body: SafeArea(
             child: Center(

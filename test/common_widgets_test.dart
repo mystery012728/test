@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:testprojectnew/core/widgets/common_empty_state.dart';
 import 'package:testprojectnew/core/widgets/common_error_state.dart';
+import 'package:testprojectnew/core/widgets/custom_back_button.dart';
 import 'package:testprojectnew/core/widgets/custom_toast_bar.dart';
 
 Widget _buildTestApp(Widget child) {
@@ -148,6 +149,25 @@ void main() {
 
       // Toast should now be removed after 3 seconds
       expect(find.text('Test Toast Message'), findsNothing);
+    });
+  });
+
+  group('CustomBackButton Tests', () {
+    testWidgets('renders arrow_back_ios_new_rounded icon and triggers callback',
+        (tester) async {
+      bool tapped = false;
+
+      await tester.pumpWidget(
+        _buildTestApp(
+          CustomBackButton(
+            onPressed: () => tapped = true,
+          ),
+        ),
+      );
+
+      expect(find.byIcon(Icons.arrow_back_ios_new_rounded), findsOneWidget);
+      await tester.tap(find.byType(CustomBackButton));
+      expect(tapped, isTrue);
     });
   });
 }

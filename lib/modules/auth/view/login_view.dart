@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/routes/app_routes.dart';
 import '../../../core/widgets/custom_button.dart';
+import '../../../core/widgets/custom_back_button.dart';
 import '../../../core/widgets/custom_text_field.dart';
 import '../../../core/widgets/custom_toast_bar.dart';
 import '../bloc/login/login_bloc.dart';
@@ -60,7 +61,11 @@ class _LoginViewState extends State<LoginView> {
         final isLoading = state is LoginLoading;
 
         return Scaffold(
-          appBar: AppBar(),
+          appBar: AppBar(
+            leading: Navigator.canPop(context)
+                ? const CustomBackButton()
+                : null,
+          ),
           body: SafeArea(
             child: Center(
               child: SingleChildScrollView(

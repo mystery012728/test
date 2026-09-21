@@ -5,6 +5,7 @@ import '../../../core/constants/app_colors.dart';
 import '../../../core/routes/app_routes.dart';
 import '../../../core/widgets/common_empty_state.dart';
 import '../../../core/widgets/common_error_state.dart';
+import '../../../core/widgets/custom_back_button.dart';
 import '../../cart/bloc/cart/cart_bloc.dart';
 import '../../home/widgets/product_card_widget.dart';
 import '../bloc/product_list/product_list_bloc.dart';
@@ -68,6 +69,7 @@ class _ProductListViewState extends State<ProductListView> {
     return Scaffold(
       backgroundColor: AppColors.scaffoldBackground,
       appBar: AppBar(
+        leading: const CustomBackButton(),
         title: Text(
           displayTitle,
           style: TextStyle(

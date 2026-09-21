@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/local/local_preference.dart';
 import '../../../core/routes/app_routes.dart';
+import '../../../core/widgets/custom_back_button.dart';
 import '../../auth/models/user_model.dart';
 import '../../auth/repo/auth_repository.dart';
 import '../../onboarding/view/onboarding_view.dart';
@@ -21,6 +22,9 @@ class ProfileView extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.scaffoldBackground,
       appBar: AppBar(
+        leading: Navigator.canPop(context)
+            ? const CustomBackButton()
+            : null,
         title: Text(
           'My Profile',
           style: TextStyle(

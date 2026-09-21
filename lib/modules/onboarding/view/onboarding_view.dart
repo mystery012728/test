@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/routes/app_routes.dart';
 import '../../../core/widgets/custom_button.dart';
+import '../../../core/widgets/custom_back_button.dart';
 import '../../../core/widgets/custom_toast_bar.dart';
 import '../../home/bloc/home_bloc.dart';
 import '../../profile/bloc/profile_bloc.dart';
@@ -76,11 +77,7 @@ class _OnboardingViewState extends State<OnboardingView> {
             backgroundColor: AppColors.scaffoldBackground,
             elevation: 0,
             leading: canGoBack
-                ? IconButton(
-                    icon: const Icon(Icons.arrow_back_ios_new_rounded,
-                        color: AppColors.textDark),
-                    onPressed: () => Navigator.pop(context),
-                  )
+                ? const CustomBackButton()
                 : null,
             actions: [
               TextButton(

@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/widgets/common_empty_state.dart';
 import '../../../core/widgets/common_error_state.dart';
+import '../../../core/widgets/custom_back_button.dart';
 import '../../home/widgets/product_card_widget.dart';
 import '../bloc/search/search_bloc.dart';
 import '../widgets/product_skeleton_loader.dart';
@@ -56,11 +57,7 @@ class _SearchViewState extends State<SearchView> {
       appBar: AppBar(
         backgroundColor: AppColors.white,
         elevation: 0,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios_new_rounded,
-              color: AppColors.textDark, size: 20.sp),
-          onPressed: () => Navigator.pop(context),
-        ),
+        leading: const CustomBackButton(),
         title: TextField(
           controller: _searchController,
           autofocus: true,

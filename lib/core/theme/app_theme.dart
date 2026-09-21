@@ -13,6 +13,12 @@ class AppTheme {
         surface: AppColors.surface,
         brightness: Brightness.light,
       ),
+      actionIconTheme: ActionIconThemeData(
+        backButtonIconBuilder: (BuildContext context) => const Icon(
+          Icons.arrow_back_ios_new_rounded,
+          color: AppColors.textDark,
+        ),
+      ),
       appBarTheme: const AppBarTheme(
         backgroundColor: Colors.transparent,
         elevation: 0,

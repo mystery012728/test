@@ -6,6 +6,7 @@ import '../../../core/constants/app_colors.dart';
 import '../../../core/routes/app_routes.dart';
 import '../../../core/widgets/common_empty_state.dart';
 import '../../../core/widgets/common_error_state.dart';
+import '../../../core/widgets/custom_back_button.dart';
 import '../../../core/widgets/custom_skeleton_loader.dart';
 import '../bloc/order_bloc.dart';
 import '../models/order_model.dart';
@@ -41,11 +42,7 @@ class _OrderHistoryViewState extends State<OrderHistoryView> {
         centerTitle: true,
         backgroundColor: AppColors.white,
         elevation: 0,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios_new_rounded,
-              color: AppColors.textDark, size: 20.sp),
-          onPressed: () => Navigator.pop(context),
-        ),
+        leading: const CustomBackButton(),
       ),
       body: Center(
         child: ConstrainedBox(

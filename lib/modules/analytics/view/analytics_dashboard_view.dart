@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/local/local_preference.dart';
+import '../../../core/widgets/custom_back_button.dart';
 import '../../cart/bloc/wishlist/wishlist_bloc.dart';
 import '../../order/bloc/order_bloc.dart';
 import '../../order/models/order_model.dart';
@@ -28,6 +29,9 @@ class _AnalyticsDashboardViewState extends State<AnalyticsDashboardView> {
     return Scaffold(
       backgroundColor: AppColors.scaffoldBackground,
       appBar: AppBar(
+        leading: Navigator.canPop(context)
+            ? const CustomBackButton()
+            : null,
         title: Text(
           'Analytics & Insights',
           style: TextStyle(

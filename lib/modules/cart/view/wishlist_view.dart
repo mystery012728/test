@@ -6,6 +6,7 @@ import '../../../core/constants/app_colors.dart';
 import '../../../core/routes/app_routes.dart';
 import '../../../core/widgets/common_empty_state.dart';
 import '../../../core/widgets/common_error_state.dart';
+import '../../../core/widgets/custom_back_button.dart';
 import '../../../core/widgets/custom_skeleton_loader.dart';
 import '../../../core/widgets/custom_toast_bar.dart';
 import '../bloc/cart/cart_bloc.dart';
@@ -48,6 +49,9 @@ class _WishlistViewState extends State<WishlistView> {
     return Scaffold(
       backgroundColor: AppColors.scaffoldBackground,
       appBar: AppBar(
+        leading: Navigator.canPop(context)
+            ? const CustomBackButton()
+            : null,
         title: Text(
           'My Wishlist',
           style: TextStyle(
